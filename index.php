@@ -23,13 +23,38 @@ error_reporting(E_ALL);
 
 <body>
     <div id="app">
-        <div class="container pt-5">
-            <ul class="list-group">
-                <li class="list-group-item active" aria-current="true">Todo List percorso Boolean</li>
-                <li v-for='item in todoList' class="list-group-item">{{ item.language }}</li>
-            </ul>
-        </div>
+        <div class="container p-5">
+            <div class="row">
+                <div class="col">
+                    <ul class="list-group">
+                        <li class="list-group-item active text-center" aria-current="true">
+                            <h2>
+                                Todo List percorso Boolean
+                            </h2>
+                        </li>
+                        <li v-for='item in todoList' class="list-group-item">{{ item.language }}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col">
 
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-9">
+                                <input v-model='language' type="text" placeholder='Aggiungi una task'
+                                    class=" form-control" id="inputtext">
+                            </div>
+                            <div class="col-3">
+                                <button type="submit" class="col-12 btn btn-primary" @click='addTodo'>Submit</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
     <script type='text/javascript' src="script.js"></script>
 </body>

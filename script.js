@@ -14,6 +14,21 @@ createApp({
             this.todoList = response.data;
             console.log(this.todoList)
         })
+    },
+    methods: {
+        addTodo() {
+            const data = {
+                todoItem: this.language,
+            }
+
+            axios.post(this.api, data, {
+                headers: { 'Content-Type': 'multipart/form-data' }
+            }).then((response) => {
+                this.language = '';
+                this.todoList = response.data;
+            })
+
+        }
     }
 
 
