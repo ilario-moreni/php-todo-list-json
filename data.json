@@ -1,18 +1,14 @@
-[
-    {
+{
+    "0": {
         "language": "HTML",
         "state": true
     },
-    {
+    "1": {
         "language": "CSS",
         "state": true
     },
-    {
-        "language": "JavaScript",
-        "state": true
-    },
-    {
+    "3": {
         "language": "PHP",
         "state": true
     }
-]
+}

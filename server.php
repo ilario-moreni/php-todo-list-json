@@ -19,8 +19,7 @@ if (isset($_POST['todoItem'])) {
 }
 
 if (isset($_POST['element'])) {
-    unset($todoList($_POST['element']))
-
+    unset($todoList[$_POST['element']]);
     file_put_contents('data.json', json_encode($todoList, JSON_PRETTY_PRINT));
 }
 
