@@ -32,7 +32,11 @@ error_reporting(E_ALL);
                                 Todo List percorso Boolean
                             </h2>
                         </li>
-                        <li v-for='item in todoList' class="list-group-item">{{ item.language }}</li>
+                        <li v-for='(item, index) in todoList'
+                            class="list-group-item d-flex justify-content-between px-5" :key='index'>
+                            {{ item.language }} <button type="submit" class="btn btn-outline-danger"
+                                @click='deleteTodo(index)'>X</button>
+                        </li>
                     </ul>
                 </div>
             </div>
